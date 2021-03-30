@@ -1,3 +1,15 @@
+function uploadFiles(form) {
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', form.url, true);
+  xhr.addEventListener('loadstart', function() {});
+  xhr.addEventListener('loadend', function() {});
+  xhr.addEventListener('error', function() { alert ('failed'); });
+    
+  xhr.send(new FormData(form));
+  
+
+}
+
 interact('.resize-drag')
   .draggable({
     onmove: window.dragMoveListener
