@@ -63,7 +63,7 @@ function saveClick() {
 function saveDocument(project) {
   let content = document.querySelector(".resize-container").innerHTML;
   var xhr = new XMLHttpRequest();
-  xhr.open('POST', "/save/" + project, true);
+  xhr.open('POST', "/dev/save/" + project, true);
   xhr.setRequestHeader("Content-Type", "application/json");
   xhr.addEventListener('loadstart', function() {
     document.querySelector("#spinner").style.visibility="visible";
